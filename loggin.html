@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,500;0,800;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3d6b73443c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/autenticacion.css">
+    <link rel="stylesheet" href="./css/comun.css">
+
+    <title>FISEI SHOP</title>
+</head>
+
+<body>
+
+    <div id="info_top" class="fondo_negro">
+        <div class="container">
+            <span><i class="fas fa-phone"></i> 00 33 169 7720</span>
+            <span><i class="far fa-envelope-open"></i> info@fiseishop.com
+            </span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="./index.html">
+                        <img class="logo" src="imagenes/logoFISEI.jpg" alt="" srcset="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="py-4">
+
+
+
+<section class="container-fluid">
+    <section class="row justify-content-center">
+        <section class="col-sm-9 col-md-8 col-lg-6">
+            <form id="formularioInicio" class="form_conatiner">
+                <h1 class="text-center">INICIO DE SESION</h1>
+                <div class="divider"></div>
+                <p class="text-left">Inicia sesion con Facebook.</p>
+    
+                <center>
+    
+                    <button type="button" onclick="recargarr()" class="btn btn-primary"><i
+                            class="fab fa-facebook-square"></i> Continuar con Facebook</button>
+    
+                </center>
+                <hr>
+                <p class="text-left">Inicia sesion con correo.</p>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Direccion de E-Mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Contarseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                </div>
+                <div class="form-group form-check">
+                    <label>
+                        <input type="checkbox"> Mantener sesion activa.
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-success btn-block btn-dark">INGRESAR</button>
+                <a href="#" onclick="recuperarContra()">¿Haz olvidado tu contraseña?</a>
+                <br>
+                <button onclick="location.href='registrarse.html'" type="button"
+                    class="btn btn-secondary float-right  btn-dark">REGISTRARSE</button>
+            </form>
+        </section>
+        
+    </section>
+
+</section>
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ERROR DE INICIO DE SESIONNNNN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Usuario o contraseña incorrectos.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="errorModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ERROR DE INICIO DE SESION</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Demasiados intentos de inicio de sesión fallidos. Por favor, inténtelo de nuevo más tarde.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="errorContrasena" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ERROR AL RECUPERAR SU CLAVE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ingrese un correo electronico valido.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exitoContrasena" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ATENCIO</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Se ha enviado un correo a su cuenta, por favor siga los pasos indicados.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="recargar()" class="btn btn-secondary"
+                        data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer bg-dark">
+        <!-- shop features-->
+        <div class="pt-5 pb-0 pb-md-5 border-bottom border-light" id="shop-features" style="background-color: #1f1f1f;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 border-right border-light">
+                        <div class="icon-box text-center mb-5 mb-md-0">
+                            <div class="icon-box-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg></div>
+                            <h3 class="icon-box-title font-weight-semibold text-white">Envio Gratuito</h3>
+                            <p class="icon-box-text">Recibe gratis tu pedido en cualquier lugar de la ciudad</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 border-right border-light">
+                        <div class="icon-box text-center mb-5 mb-md-0">
+                            <div class="icon-box-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw">
+                                    <polyline points="23 4 23 10 17 10"></polyline>
+                                    <polyline points="1 20 1 14 7 14"></polyline>
+                                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15">
+                                    </path>
+                                </svg></div>
+                            <h3 class="icon-box-title font-weight-semibold text-white">Garantia de devolución</h3>
+                            <p class="icon-box-text">Si existen problemas con tus productos te devolvemos tu dinero</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 border-right border-light">
+                        <div class="icon-box text-center mb-5 mb-md-0">
+                            <div class="icon-box-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-life-buoy">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                                    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                                    <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                                    <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                                    <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                                </svg></div>
+                            <h3 class="icon-box-title font-weight-semibold text-white">Soporte 24/7</h3>
+                            <p class="icon-box-text">Soporte permanente en tus compras las 24H</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="icon-box text-center mb-5 mb-md-0">
+                            <div class="icon-box-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                </svg></div>
+                            <h3 class="icon-box-title font-weight-semibold text-white">Pago en linea Seguro</h3>
+                            <p class="icon-box-text">Pasarela de pago segura con seguridad HTTPS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- third row-->
+        <div class="pt-5 pb-4" style="background-color: #1f1f1f;">
+            <div class="container">
+
+                <div class="row pt-4">
+                    <div class="col-sm-6 text-center text-sm-left">
+                        <ul class="list-inline font-size-sm">
+                            <li class="list-inline-item mr-3"><a class="nav-link-inline nav-link-light"
+                                    href="./index.html">Inicio</a></li>
+                            <li class="list-inline-item mr-3"><a class="nav-link-inline nav-link-light"
+                                    href="./explorar.html">Productos</a></li>
+                            <li class="list-inline-item mr-3"><a class="nav-link-inline nav-link-light"
+                                    href="#">Privacidad</a></li>
+                            <li class="list-inline-item mr-3"><a class="nav-link-inline nav-link-light" href="#">Terminos</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 text-center text-sm-right">
+                        <div class="d-inline-block"><img width="187" src="./imagenes/cards.png" alt="Payment methods">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-3" style="background-color: #1a1a1a;">
+            <div class="container font-size-xs text-center" aria-label="Copyright"><span
+                    class="text-white opacity-60 mr-1">© Todos los derechos reservados. Hecho en FISEI</span><a
+                    class="nav-link-inline nav-link-light" href="http://uta.edu.ec" target="_blank">UTA</a></div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+    <script defer src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+    <script defer src="./js/login.js"></script>
+
+</body>
+
+</html>

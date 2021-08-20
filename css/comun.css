@@ -1,0 +1,118 @@
+body {
+    font-family: 'Muli', sans-serif !important;
+    color: rgba(0,0,0,0.9) !important;
+}
+
+#info_top{
+    padding: 0.3em 0px;
+}
+#info_top span{
+    margin-right: 0.4em;
+}
+
+.fondo_negro{
+    background-color: #222;
+    color: white;
+    fill: white !important;
+}
+
+header{
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    padding-top: 1em;
+}
+
+.logo{
+    height: 20px;
+    margin: 0.5rem 0px;
+    vertical-align: middle;
+}
+
+#menu_principal{
+
+    color: rgba(0,0,0,0.9) !important;
+}
+
+#menu_principal a{
+    color: rgba(0,0,0,0.9) !important;
+    margin-right: 2em;
+}
+
+#menu_principal .seleccionado{
+    border-bottom: solid 2px #5c77fc !important;
+    padding-bottom: 0.25em;
+}
+
+.carrito{
+    font-size: 1.3em;
+}
+
+.morsdo{
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    color: #5c77fc;
+}
+
+.boton_menu{
+    text-align: center;
+    display: inline-block;
+    margin:  0px 0.5em;
+}
+
+.boton_menu span{
+    font-size: 0.8em;
+}
+
+.no_link{
+    color: black; 
+    text-decoration: inherit; 
+}
+
+.no_link:hover{
+    color: #5c77fc; 
+    text-decoration: none; 
+}
+
+.linea{
+    border-bottom: 1.2px solid #e7e7e7;
+}
+
+
+footer .nav-link-inline {
+    color: rgba(255,255,255,0.65);
+}
+
+footer .border-light {
+    border-color: rgba(255,255,255,0.14) !important;
+}
+
+footer .icon-box-icon {
+    display: inline-block;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(92,119,252,0.1);
+    border-radius: 50%;
+    color: #5c77fc;
+    text-align: center;
+    line-height: 4.25rem;
+}
+
+footer .font-weight-semibold {
+    font-weight: 600 !important;
+}
+.icon-box-title {
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+.text-white {
+    color: #fff !important;
+}
+
+.icon-box-text {
+    margin-bottom: 0;
+    color: #888;
+    font-size: .875rem;
+}

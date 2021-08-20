@@ -1,0 +1,90 @@
+#contenedorCompra{
+float: left;
+text-align: center;
+}
+#contenedorProductos{float: left;}
+.card-imagen{
+    width: 90%;
+    height: 90%;
+}
+.containerP{padding: 2%;}
+.btn {
+    border-radius: 0;
+    font-family: 'Muli', sans-serif;
+    width: 100%;
+    height: 20%;
+    margin: 2% 0;
+}
+.etiqueta{color: #888888;}
+.descripcion{color: #404040;}
+.card2{border-bottom:  1px solid #e7e7e7;}
+#refe{
+    color: white;
+    text-decoration: none;
+}
+#barraProduct{
+    background-color: #f7f7f7;
+    padding: 1% 2%;
+}
+#tit{
+    float: left; width:40%;
+}
+#linkShop{
+    color: #5c79fc;
+    font-weight: 800;
+    text-align: right;
+}
+.card{
+   border-bottom:  1px solid #e7e7e7 !important;
+    border: none;
+    padding: 1%;
+    border-radius: 0;
+}
+#checkout{
+    background-color: #5c77fc;
+    border-color: #5c77fc;
+}
+.estiloPrecio{
+    font: 800;
+    font-size: 1.3em;
+    
+    color: #5c77fc;
+}
+.ingreso{
+    border-radius: 0;
+    width: 100%;
+    height: 20%;
+}
+#barraProduct2 p{
+    background-color: #f7f7f7;
+    height:2.7em;
+    text-align: center;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0.5em 0 1em 0;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}#precio{
+    font-size: 1.5em;
+}
+@media(max-width: 767px){
+    .conteCar{
+        text-align: center;
+    } 
+    .card-imagen{
+        width: 45%;
+    }
+    .imgCarta{
+        height: 20%;
+    }
+}
+
+
+.breadcrumb a{
+    color: inherit;
+  text-decoration: none;
+}
